@@ -12,6 +12,7 @@ interface SignUpData {
 }
 
 interface SignUpResponse {
+  message: string;
   token: string;
   user: {
     user_id: number;
