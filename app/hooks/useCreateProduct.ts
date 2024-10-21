@@ -39,7 +39,7 @@ const useCreateProduct = () => {
     setError(null);
 
     try {
-      const response = await fetch('https://verisart-kevin-core.eu.ngrok.io/api/create-product', {
+      const response = await fetch(`${process.env.BACKEND_URL}/api/create-product`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

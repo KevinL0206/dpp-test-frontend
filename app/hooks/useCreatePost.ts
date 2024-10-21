@@ -31,7 +31,7 @@ const useCreatePost = () => {
     setError(null);
 
     try {
-      const response = await fetch('https://verisart-kevin-core.eu.ngrok.io/api/create-post', {
+      const response = await fetch(`${process.env.BACKEND_URL}/api/create-post`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

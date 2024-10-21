@@ -36,7 +36,7 @@ const useGetCollectionData = (uid: string, token?: string, authToken?: string | 
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://verisart-kevin-core.eu.ngrok.io/api/collection/${uid}/${collectionId}/posts`,
+        `${process.env.BACKEND_URL}/api/collection/${uid}/${collectionId}/posts`,
         {
           params: { token: token, auth_token: authToken },
           headers: {

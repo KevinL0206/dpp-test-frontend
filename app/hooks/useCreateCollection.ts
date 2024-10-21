@@ -33,7 +33,7 @@ const useCreateCollection = () => {
     setError(null);
 
     try {
-      const response = await fetch('https://verisart-kevin-core.eu.ngrok.io/api/create-collection', {
+      const response = await fetch(`${process.env.BACKEND_URL}/api/create-collection`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

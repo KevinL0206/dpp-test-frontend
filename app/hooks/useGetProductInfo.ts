@@ -37,7 +37,7 @@ const useGetProductInfo = (uid: string, token?: string, authToken?: string | nul
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://verisart-kevin-core.eu.ngrok.io/api/product/${uid}`,
+        `${process.env.BACKEND_URL}/api/product/${uid}`,
         {
           params: { token: token, auth_token: authToken },
           headers: {

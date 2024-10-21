@@ -28,7 +28,7 @@ const useClaimTag = () => {
     setError(null);
 
     try {
-      const response = await fetch('https://verisart-kevin-core.eu.ngrok.io/api/claim-tag', {
+      const response = await fetch(`${process.env.BACKEND_URL}/api/claim-tag`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

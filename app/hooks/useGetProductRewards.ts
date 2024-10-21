@@ -39,7 +39,7 @@ const useGetProductRewards = (productId: number | undefined, token: string | nul
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://verisart-kevin-core.eu.ngrok.io/api/product/${productId}/rewards`,
+        `${process.env.BACKEND_URL}/api/product/${productId}/rewards`,
         {
           headers: {
             'Authorization': token,

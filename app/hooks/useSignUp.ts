@@ -30,7 +30,7 @@ export const useSignUp = () => {
   const signUp = async (userData: SignUpData) => {
     dispatch(loginStart());
     try {
-      const response = await axios.post<SignUpResponse>('https://verisart-kevin-core.eu.ngrok.io/api/signup', userData);
+      const response = await axios.post<SignUpResponse>(`${process.env.BACKEND_URL}/api/signup`, userData);
       
       const { token, user } = response.data;
 
